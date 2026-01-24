@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: mlporject1
+Version: 0.0.1
+Author: Aastha
+Author-email: rathoreaasthaspare@gmail.com
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: seaborn
