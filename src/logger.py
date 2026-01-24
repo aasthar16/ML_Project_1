@@ -1,0 +1,22 @@
+import logging
+import os
+from datetime import datetime
+
+LOG_FILE=f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
+logs_path=os.path.join(os.getcwd() , "logs" , LOG_FILE)
+os.makedirs(logs_path, exist_ok=True)
+
+# exist_ok -> is used so that if the folder already exist , donot crash
+# in windows , args of os.path.join are added using '\' , also , it is single path no nested folders
+
+
+LOG_FILE_path=os.path.join(logs_path , LOG_FILE)
+
+logging.basicConfig(
+    filename=LOG_FILE_path,
+    format="[%(asctime)s] %(lineno)d %(name)s - %(levelname)s - %(message)s",
+    level=logging.INFO
+)
+
+if __name__=="__main__":
+    logging.info("Logging as started")
