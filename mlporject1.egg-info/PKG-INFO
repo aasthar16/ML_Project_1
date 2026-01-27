@@ -6,3 +6,7 @@ Author-email: rathoreaasthaspare@gmail.com
 Requires-Dist: numpy
 Requires-Dist: pandas
 Requires-Dist: seaborn
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: catboost
+Requires-Dist: xgboost
