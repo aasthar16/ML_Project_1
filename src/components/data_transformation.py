@@ -15,7 +15,7 @@ from src.utils import save_object
 
 @dataclass
 class DataTransfromationConfig:
-    preproccesor_obj_file_path=os.path.join('artifact', 'preprocessor.pkl')
+    preproccesor_obj_file_path=os.path.join('artifacts', 'preprocessor.pkl')
     # this the path to store our model in pickle file 
 
 class Data_Transformation:

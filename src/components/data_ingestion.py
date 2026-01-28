@@ -8,6 +8,7 @@ from dataclasses import dataclass
 from src.components.data_transformation import Data_Transformation
 from src.components.data_transformation import DataTransfromationConfig
 # from src.components import data
+from src.components.model_trainer import ModelTrainer , ModelTrainerConfig
 
 # inputs required by data ingestion , these inputs will be extracted using this class
 @dataclass
@@ -52,7 +53,10 @@ if __name__=='__main__':
     train_data , test_data=obj.initiate_data_ingestion()
 
     data_transform=Data_Transformation()
-    data_transform.initiate_data_tranformation(train_data , test_data)
+    train_arr, test_arr , path =data_transform.initiate_data_tranformation(train_data , test_data)
+
+    modeltrainer=ModelTrainer()
+    print(modeltrainer.inititate_model_trainer(train_arr, test_arr  ))
         
     
 
