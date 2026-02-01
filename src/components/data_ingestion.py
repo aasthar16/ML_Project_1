@@ -13,12 +13,12 @@ from src.components.model_trainer import ModelTrainer , ModelTrainerConfig
 # inputs required by data ingestion , these inputs will be extracted using this class
 @dataclass
 class DataIngestionConfig:
-    train_data_path: str=os.path.join('artifacts' , 'train.csv')
+    train_data_path:str = os.path.join('artifacts' , 'train.csv')
     # this is the path in which we will store train_data
 
-    test_data_path: str=os.path.join('artifacts' , 'test.csv')
+    test_data_path:str = os.path.join('artifacts' , 'test.csv')
 
-    raw_data_path : str=os.path.join('artifacts' , 'data.csv')
+    raw_data_path:str = os.path.join('artifacts' , 'data.csv')
 
 class DataIngestion:
     def __init__(self):
@@ -59,4 +59,5 @@ if __name__=='__main__':
     print(modeltrainer.inititate_model_trainer(train_arr, test_arr  ))
         
     
+
 

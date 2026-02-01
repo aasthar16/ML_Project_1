@@ -6,6 +6,8 @@ LOG_FILE=f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 logs_path=os.path.join(os.getcwd() , "logs" , LOG_FILE)
 os.makedirs(logs_path, exist_ok=True)
 
+# strftime -> it is string format time function
+
 # exist_ok -> is used so that if the folder already exist , donot crash
 # in windows , args of os.path.join are added using '\' , also , it is single path no nested folders
 

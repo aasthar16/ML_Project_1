@@ -49,7 +49,7 @@ class Data_Transformation:
             )
 
             logging.info("Categorical Columns Encoding started")
-            logging.info("Munerical Columns Standard Scaling started")
+            logging.info("Numerical Columns Standard Scaling started")
 
             preprocessor=ColumnTransformer(
                 [
@@ -93,7 +93,7 @@ class Data_Transformation:
             input_feature_test_df=test_df.drop(columns=[target_col_name] , axis=1)
             target_feature_test_df=test_df[target_col_name]
 
-            logging.info("Applying preprocessing object on traininf and testing df")
+            logging.info("Applying preprocessing object on training and testing df")
 
             input_feature_train_arr=prep.fit_transform(input_feature_train_df)
             input_feature_test_arr=prep.transform(input_feature_test_df)
